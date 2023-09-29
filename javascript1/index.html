@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cambio de Clases con Eventos</title>
+    <style>
+        .claseInicial {
+            background-color: lightblue;
+        }
+
+        .nuevaClase {
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <button id="cambio">Cambiar Clase</button>
+    <div id="j" class="claseInicial">Este es un elemento con una clase inicial.</div>
+
+    <script>
+        var elemento = document.getElementById("j");
+        var cambio = document.getElementById("cambio");
+
+        // Agrega un controlador de eventos al botón
+        cambio.addEventListener("click", function() {
+            // Verifica si el elemento tiene la clase "claseInicial"
+            if (miElemento.classList.contains("claseInicial")) {
+                // Si tiene la clase, quítala y agrega la nueva clase "nuevaClase"
+                miElemento.classList.remove("claseInicial");
+                miElemento.classList.add("nuevaClase");
+            } else {
+                // Si no tiene la clase, vuelve a agregarla
+                miElemento.classList.remove("nuevaClase");
+                miElemento.classList.add("claseInicial");
+            }
+        });
+    </script>
+</body>
+</html>
